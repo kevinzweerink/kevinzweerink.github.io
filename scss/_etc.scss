@@ -1,0 +1,30 @@
+.etc {
+	@include section_base;
+	padding-bottom: 30px;
+
+	.col {
+		@include grid_cols_lg(2);
+		margin-top: 30px;
+
+		img {
+			display: block;
+			margin-bottom: $gutter_width * 2 * 1%;
+		}
+
+		.double {
+
+			img {
+				width: 50% - $gutter_width * 1%;
+				float: left;
+
+				&:first-of-type {
+					margin-right: $gutter_width * 2 * 1%;
+				}
+
+			}
+
+		}
+
+	}
+
+}

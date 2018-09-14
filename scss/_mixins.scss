@@ -1,0 +1,62 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin display_type {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin sans_largest {
+	@include display_type;
+	font-family: $sans;
+	font-size: 40px;
+	line-height: 52px;
+	font-weight: $sans_weight;
+}
+
+@mixin sans_large {
+	@include display_type;
+	font-family: $sans;
+	font-size: 26px;
+	line-height: 34px;
+	font-weight: $sans_weight;
+}
+
+@mixin sans_small {
+	@include display_type;
+	font-family: $sans;
+	font-size: 15px;
+	line-height: 21px;
+	font-weight: $sans_weight;
+}
+
+@mixin serif_small {
+	@include display_type;
+	font-family: $serif;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: $serif_weight;
+}
+
+@mixin section_base {
+	@include clearfix;
+	padding-top: 30px;
+	border-top: 1px solid $black;
+}
+
+@mixin tablet {
+	@media (max-width: 900px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: 600px) {
+		@content;
+	}
+}

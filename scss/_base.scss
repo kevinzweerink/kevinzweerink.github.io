@@ -1,0 +1,37 @@
+html, body {
+	@include sans_small;
+	color: $powder;
+	padding: 0;
+	background: $gray-90;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	@include grid_container;
+}
+
+a {
+	transition: color .15s ease;
+	text-decoration: none;
+	color: $white;
+
+	&:hover {
+		color: $powder;
+	}
+}
+
+img, video {
+	max-width: 100%;
+}
+
+h3 {
+	@include sans_small;
+	//font-style: italic;
+}
+
+.section-title {
+	@include grid_cols_lg(4);
+}

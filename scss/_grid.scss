@@ -1,0 +1,19 @@
+@mixin grid_container {
+	@include clearfix;
+	display: block;
+	width: $grid_width * 1%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+@mixin grid_cols_lg($num) {
+	width: ($num * $col_width) + (($num - 1) * $gutter_width) * 1%;
+	margin-left: ($gutter_width / 2) * 1%;
+	margin-right: ($gutter_width / 2) * 1%;
+	float: left;
+}
+
+@mixin skip_cols_lg($num) {
+	margin-left: 1% * ($num * $col_width + $gutter_width * 1.5);
+}
+

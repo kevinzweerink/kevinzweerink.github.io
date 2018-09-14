@@ -1,0 +1,48 @@
+.contact {
+	@include section_base;
+	background: $black;
+
+	.section-title {
+		margin-bottom: 60px;
+	}
+
+	.quick-contact {
+		@include grid_cols_lg(1);
+
+		@include mobile {
+			@include grid_cols_lg(4);
+			margin-bottom: 20px;
+
+			li {
+				display: inline;
+				&:not(:last-of-type):after {
+					content: ' | '
+				}
+			}
+		}
+	}
+
+	.contact-message {
+		@include grid_cols_lg(2);
+		overflow: hidden;
+
+		p {
+			@include sans_large;
+			margin-bottom: 20px;
+		}
+
+		.thanks {
+			@include sans_small;
+			margin-top: 100px;
+			margin-bottom: -9px;
+		}
+
+		@include tablet {
+			@include grid_cols_lg(3);
+		}
+
+		@include mobile {
+			@include grid_cols_lg(4);
+		}
+	}
+}

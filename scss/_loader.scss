@@ -1,0 +1,53 @@
+@keyframes dot_bump {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.loader {
+	width: 40px;
+	float: right;
+	margin-top: -5px;
+
+	& > div {
+		transition: transform .15s ease;
+		width: 4px;
+		height: 4px;
+		border-radius: 4px;
+		display: inline-block;
+		background: $white;
+		margin-left: 5px;
+		transform: scale(0);
+	}
+
+	&.shown {
+		& > div {
+			transform: scale(1);
+		}
+
+		.first {
+			animation: dot_bump 1s ease .15s infinite;
+		}
+
+		.second {
+			animation: dot_bump 1s ease .35s infinite;
+		}
+
+		.third {
+			animation: dot_bump 1s ease .55s infinite;
+		}		
+	}
+
+	@include mobile {
+		display: none;
+	}
+
+}

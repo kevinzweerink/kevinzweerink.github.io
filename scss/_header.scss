@@ -1,0 +1,52 @@
+header {
+	@include sans_small;
+	transition: border .25s ease;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	color: $white;
+	padding: 18px 0 15px;
+	border-bottom: 1px solid transparent;
+	background: $gray_90;
+	z-index: 100;
+
+	&.fixed {
+		border-bottom: 1px solid $black;
+	}
+
+	h1 {
+		@include grid_cols_lg(1);
+	}
+
+	ul {
+		@include grid_cols_lg(2);
+	}
+
+	li {
+		display: inline;
+
+		&:not(:first-of-type):before {
+			content: '— ';
+		}
+	}
+
+	a.active {
+		&:after {
+			content: '•';
+			color: $powder;
+			padding-left: 4px;
+			padding-right: 3px;
+		}
+	}
+
+	@include mobile {
+		h1 {
+			@include grid_cols_lg(1.5);
+		}
+
+		ul {
+			@include grid_cols_lg(2.5);
+		}
+	}
+}

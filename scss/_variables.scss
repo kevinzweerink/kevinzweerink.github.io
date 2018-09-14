@@ -1,0 +1,17 @@
+$grid_width : 95;
+$col_count : 4;
+$gutter_width : 1;
+$col_width : (100 - $gutter_width * $col_count) / $col_count;
+
+$sans : 'Atlas-Grotesk-Regular';
+$serif : 'Adobe Caslon Pro';
+
+$sans_weight : 300;
+$serif_weight: 400;
+
+$white : #fff;
+$powder : #a5c2ec;
+
+$black : #000;
+$gray_90 : #161616;
+$gray_80 : #212121;
